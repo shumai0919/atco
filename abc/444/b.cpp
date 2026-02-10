@@ -13,9 +13,11 @@ int ketawa(int value){
 int main(void) {
     int n,k;
     cin >> n >> k;
+    int count = 0;
     for(int i = 1; i <= n; i++) {
         if (ketawa(i) == k) {
-            cout << i;
+            count++;
         }
     }
+    cout << count <<endl;
 }

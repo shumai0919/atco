@@ -1,28 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int ketasu (int value){
-    int keta = 1;
-    while (1) {
-        if (value < 10) {
-            return keta;
-        }
-        keta++;
-        value = value / 10;
+int ketawa(int value){
+    int sum = 0;
+    while (value > 0) {
+        sum += value % 10;
+        value /= 10;
     }
+    return sum;
 }
 
 int main(void) {
     int n,k;
     cin >> n >> k;
-    int keta,ketasum,sum;
-    sum = 0;
-    keta = 1;
-    // int ntemp = n;
-    cout << keta << endl;
     for(int i = 1; i <= n; i++) {
-        for (int j = 0; j < ketasu(i); j++) {
-            
+        if (ketawa(i) == k) {
+            cout << i;
         }
     }
 }
